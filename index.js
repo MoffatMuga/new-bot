@@ -52,7 +52,7 @@ const handleChat = () => {
         if (departmentLink) {
             // Extract just the word "link" from the URL
             const linkWord = `<a href="${departmentLink}" target="_blank">link</a>`;
-            chatbox.appendChild(createChatLi(`Sure, here is the e-library ${linkWord} for ${departmentName} department <br> Happy learning! .`, "incoming"));
+            chatbox.appendChild(createChatLi(`Sure, here is the e-library ${linkWord} for ${departmentName} department <br> Happy learning! 🎉.`, "incoming"));
         } else {
             chatbox.appendChild(createChatLi(`Oops! Sorry, I don't have information about ${departmentName}.`, "incoming"));
         }
