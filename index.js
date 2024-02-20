@@ -57,7 +57,7 @@ const handleChat = () => {
             const linkWord = `<a href="${departmentLink}" target="_blank">link</a>`;
             chatbox.appendChild(createChatLi(`Sure, here is the e-library ${linkWord} for ${departmentName} department <br> Happy learning! 🎉.`, "incoming"));
         } else {
-            chatbox.appendChild(createChatLi(`Oops! Sorry, I don't have information about ${departmentName}, please refer to the departments listed.`, "incoming"));
+            chatbox.appendChild(createChatLi(`Oops! Sorry, I don't have information about ${departmentName}, please enter a department listed.`, "incoming"));
         }
 
         // Always scroll to bottom if chatbox is overflowing
