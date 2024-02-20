@@ -4,6 +4,9 @@ const chatbox = document.querySelector(".chatbox");
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const chatbotCloseBtn = document.querySelector(".close-btn");
 
+
+
+
 let userMessage;
 
 const createChatLi = (message, className) => {
@@ -54,7 +57,7 @@ const handleChat = () => {
             const linkWord = `<a href="${departmentLink}" target="_blank">link</a>`;
             chatbox.appendChild(createChatLi(`Sure, here is the e-library ${linkWord} for ${departmentName} department <br> Happy learning! 🎉.`, "incoming"));
         } else {
-            chatbox.appendChild(createChatLi(`Oops! Sorry, I don't have information about ${departmentName}.`, "incoming"));
+            chatbox.appendChild(createChatLi(`Oops! Sorry, I don't have information about ${departmentName}, please refer to the departments listed.`, "incoming"));
         }
 
         // Always scroll to bottom if chatbox is overflowing

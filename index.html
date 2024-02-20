@@ -24,7 +24,23 @@
         <ul class="chatbox">
             <li class="chat incoming">
                 <span class="material-symbols-outlined">smart_toy</span>
-                <p>Greetings! 👋 <br>Enter the departments below to <br> access the e-library services <br> ELECTRICAL <br> HOSPITALITY <br> BUILDING <br> ICT <br> AGRICULTURE <br> MECHANICAL </p>
+                <p>
+                    <script>
+                        const date = new Date();
+                        const hours = date.getHours();
+
+                        let greeting;
+                        if (hours < 12) {
+                            greeting = "Good morning! 🌅";
+                        } else if (hours < 18) {
+                            greeting = "Good afternoon! ☀️";
+                        } else {
+                            greeting = "Good evening! 🌙";
+                        }
+
+                        document.write(greeting + "<br>");
+                    </script>
+                    Enter the departments below to <br> access the e-library services <br> ELECTRICAL <br> HOSPITALITY <br> BUILDING <br> ICT <br> AGRICULTURE <br> MECHANICAL </p>
             </li>   
             
         </ul>
