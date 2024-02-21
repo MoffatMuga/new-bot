@@ -115,6 +115,14 @@ body {
     background: #fff;
     padding: 5px 20px;
 }
+
+.start {
+    position: fixed;
+    right: 110px;
+    bottom: 40px; 
+    display: flex;
+    font-size: larger;
+}
 .chatbot-toggler{
     position: fixed;
     right: 40px;

@@ -5,9 +5,33 @@ const chatbotToggler = document.querySelector(".chatbot-toggler");
 const chatbotCloseBtn = document.querySelector(".close-btn");
 
 
+const startMessage = document.getElementById('start-message');
+        const chatbot = document.querySelector('.chatbot');
+        const toggleBtn = document.querySelector('.chatbot-toggler');
 
+        // Check for stored chatbot state
+        const isChatbotOpen = localStorage.getItem('chatbotOpen') === 'true';
+        chatbot.classList.toggle('active', isChatbotOpen);
+        startMessage.textContent = isChatbotOpen
+            ? 'Click to end session'
+            : 'Click to start the STTI Library Chatbot';
+
+        // Add event listener to the toggle button
+        toggleBtn.addEventListener('click', toggleChat);
+
+        // Function to toggle chatbot visibility and update start message
+        function toggleChat() {
+            chatbot.classList.toggle('active');
+            startMessage.textContent = chatbot.classList.contains('active')
+                ? 'Click to end session'
+                : 'Click to start the STTI Library Chatbot';
+
+            // Update stored state
+            localStorage.setItem('chatbotOpen', chatbot.classList.contains('active'));
+        }
 
 let userMessage;
+
 
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
